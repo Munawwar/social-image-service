@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .preview-area {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      /* Twitter card width on desktop is 504px */
+      transform: scale(0.42);
+
+      --shadow-strength: 10%;
+      --shadow-color: 220 40% 2%;
+      box-shadow: 0 -1px 2px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+        0 2px 1px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+        0 5px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+        0 10px 10px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+        0 20px 20px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%)),
+        0 40px 40px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 7%));
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="preview-area"></div>
+  <script type="module">
+    import { h, Component, render } from 'https://esm.sh/preact';
+    import htm from 'https://esm.sh/htm';
+    import getOpenGraphJsx from './src/http/get-index/get-open-graph-jsx.mjs';
+  
+    // Initialize htm with Preact
+    const html = htm.bind(h);
+  
+    function Preview (props) {
+      return getOpenGraphJsx(html, 'Discovery of the first Aperiodic monotile', ['Design']);
+    }
+  
+    render(html`<${Preview} />`, document.querySelector('.preview-area'));
+  </script>
+</body>

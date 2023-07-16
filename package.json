@@ -1,0 +1,22 @@
+{
+  "name": "social-image-service",
+  "version": "0.1.0",
+  "description": "Dynamically generate social media images for web pages",
+  "license": "MIT",
+  "scripts": {
+    "preview": "browser-sync start --server --port 8080 --startPath=preview.html --files './src/http/get-index/get-open-graph-jsx.mjs'",
+    "dev": "arc sandbox",
+    "stage": "arc deploy",
+    "deploy": "arc deploy --production"
+  },
+  "devDependencies": {
+    "@architect/architect": "^10.12.1",
+    "@resvg/resvg-js": "^2.4.1",
+    "@types/aws-lambda": "^8.10.114",
+    "browser-sync": "^2.29.1"
+  },
+  "dependencies": {
+    "htm": "^3.1.1",
+    "satori": "^0.7.2"
+  }
+}
