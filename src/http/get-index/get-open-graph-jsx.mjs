@@ -50,7 +50,7 @@ export default (html, title, tags = []) => html`
       <div
         style=${{
           fontSize: '68px',
-          color: '#e75e3c',
+          color: '#4d79a9',
           fontWeight: '600',
           borderBottom: "1px solid #eee",
           paddingBottom: '9px'
@@ -68,7 +68,7 @@ export default (html, title, tags = []) => html`
             <div
               style=${{
                 fontSize: '36px',
-                color: '#e75e3c',
+                color: '#333',
                 marginTop: '10px',
                 marginRight: '15px'
               }}
