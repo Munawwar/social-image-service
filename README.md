@@ -1,6 +1,6 @@
 # Social Image Service
 
-Dynamically generate social media images for web pages, using AWS Lambda (arc.codes), Satori and resvg.
+Dynamically generate social media images for web pages, using AWS Lambda ([arc.codes](arc.codes)), Satori and resvg.
 
 <img src="preview.png" alt="Preview" width="504"/>
 
