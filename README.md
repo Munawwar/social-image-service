@@ -8,6 +8,9 @@ Dynamically generate social media images for web pages, using AWS Lambda ([arc.c
 # Step 1: Design
 
 ```sh
+# Use node.js v20.x
+# I use fnm node.js version manager
+# fnm install 20
 npm ci
 npm run preview
 ```

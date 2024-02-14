@@ -10,7 +10,7 @@
     "deploy": "arc deploy --production"
   },
   "devDependencies": {
-    "@architect/architect": "^10.12.1",
+    "@architect/architect": "^10.16.3",
     "@resvg/resvg-js": "^2.4.1",
     "@types/aws-lambda": "^8.10.114",
     "browser-sync": "^2.29.1"
